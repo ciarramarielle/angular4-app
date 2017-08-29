@@ -28,9 +28,9 @@ let response = {
 
 // Get users
 router.get('/ciarra', (req, res) => {
-    response.data = {
+    response.data = [{
         'a': 'b'
-    }
+    }]
     res.json(response)
     // connection((db) => {
     //     db.collection('users')
