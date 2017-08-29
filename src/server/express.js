@@ -47,11 +47,11 @@ module.exports = (app, config) => {
         //     res.send(body);
         //   }
         // )
-        res.send({
+        res.send([{
             // {
                 'a': 'b'
             // }
-        })
+        }])
     });
 
 	// /* RIOT API ROUTES */

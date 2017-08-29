@@ -25,7 +25,7 @@ const http = require('http');
 const app = express();
 
 // API file for interacting with MongoDB
-const api = require('./src/server/express');
+const api = require('./src/server/routes/api');
 
 // Parsers
 app.use(bodyParser.json());
@@ -35,28 +35,13 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // API location
-// app.use('/api', api);
+app.use('/api', api);
 
-app.get('/api/ciarra', function(req, res) {
-    // request(`https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?api_key=${config.riot_api_key}`,
-    //   function (err, response, body) {
-    //     if (err) {
-    //       res.send(Error('Not able to find champion data.'));
-    //     }
-    //     res.send(body);
-    //   }
-    // )
-    // res.data = {
-    //     // {
-    //         'a': 'b'
-    //     // }
-    // };
-    res.send({
-        // {
-            'a': 'b'
-        // }
-    });
-});
+// app.get('/api/ciarra', function(req, res) {
+//     res.send({
+//         'a': 'b'
+//     });
+// });
 // Send all other requests to the Angular app
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
