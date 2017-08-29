@@ -6,7 +6,7 @@ const dotenv = require("dotenv").config()
 module.exports = {
     development: {
         rootPath: rootPath,
-        port: process.env.PORT || 8080,
+        port: process.env.PORT || 3000,
         host: process.env.HOST || 'localhost',
         riot_api_key: process.env.RIOT_API_KEY
     }

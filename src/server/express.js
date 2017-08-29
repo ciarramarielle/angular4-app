@@ -38,7 +38,7 @@ module.exports = (app, config) => {
         res.render("index.html");// looks inside VIEWS
     });
 
-    app.get('/ciarra', function(req, res) {
+    app.get('/api/ciarra', function(req, res) {
         // request(`https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?api_key=${config.riot_api_key}`,
         //   function (err, response, body) {
         //     if (err) {
@@ -48,67 +48,69 @@ module.exports = (app, config) => {
         //   }
         // )
         res.send({
-            'a': 'b'
+            // {
+                'a': 'b'
+            // }
         })
     });
 
-	/* RIOT API ROUTES */
-    app.get('/api/riot/getChampions', function(req, res) {
-        request(`https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?api_key=${config.riot_api_key}`,
-          function (err, response, body) {
-            if (err) {
-              res.send(Error('Not able to find champion data.'));
-            }
-            res.send(body);
-          }
-        )
-    });
+	// /* RIOT API ROUTES */
+    // app.get('/api/riot/getChampions', function(req, res) {
+    //     request(`https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?api_key=${config.riot_api_key}`,
+    //       function (err, response, body) {
+    //         if (err) {
+    //           res.send(Error('Not able to find champion data.'));
+    //         }
+    //         res.send(body);
+    //       }
+    //     )
+    // });
 
-	app.get('/api/riot/getSummoner/:summonerName', function(req, res) {
-		request(`https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/${req.params.summonerName}?api_key=${config.riot_api_key}`,
-			function(err, response, body) {
-	            if (err) {
-	              res.send(Error('Not able to find summoner data.'));
-	            }
-	            console.log(err, response, body)
-				res.send(body);
-		})
-	});
+	// app.get('/api/riot/getSummoner/:summonerName', function(req, res) {
+	// 	request(`https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/${req.params.summonerName}?api_key=${config.riot_api_key}`,
+	// 		function(err, response, body) {
+	//             if (err) {
+	//               res.send(Error('Not able to find summoner data.'));
+	//             }
+	//             console.log(err, response, body)
+	// 			res.send(body);
+	// 	})
+	// });
 
-	app.get('/api/riot/getChampion/:championId', function(req, res) {
-		request(`https://na.api.pvp.net/api/lol/na/v1.4/champion/by-name/${req.params.championId}?api_key=${config.riot_api_key}`,
-			function(err, response, body) {
-	            if (err) {
-	              res.send(Error('Not able to find champion data.'));
-	            }
-				res.send(body);
-		})
-	});
+	// app.get('/api/riot/getChampion/:championId', function(req, res) {
+	// 	request(`https://na.api.pvp.net/api/lol/na/v1.4/champion/by-name/${req.params.championId}?api_key=${config.riot_api_key}`,
+	// 		function(err, response, body) {
+	//             if (err) {
+	//               res.send(Error('Not able to find champion data.'));
+	//             }
+	// 			res.send(body);
+	// 	})
+	// });
 
-    app.get('/api/riot/matchlist/:accountId', function (req, res) {
-            // request(`https://na.api.pvp.net/api/lol/na/v1.4/champion/by-name/${req.params.championId}?api_key=${config.riot_api_key}`,
-            request(`https://na1.api.riotgames.com/lol/match/v3/matchlists/by-account/${req.params.accountId}?api_key=${config.riot_api_key}`,
-                function(err, response, body) {
-                    if (err) {
-                    res.send(Error('Not able to find matchlist data.'));
-                    }
-                    res.send(body);
-            })
-        });
+    // app.get('/api/riot/matchlist/:accountId', function (req, res) {
+    //         // request(`https://na.api.pvp.net/api/lol/na/v1.4/champion/by-name/${req.params.championId}?api_key=${config.riot_api_key}`,
+    //         request(`https://na1.api.riotgames.com/lol/match/v3/matchlists/by-account/${req.params.accountId}?api_key=${config.riot_api_key}`,
+    //             function(err, response, body) {
+    //                 if (err) {
+    //                 res.send(Error('Not able to find matchlist data.'));
+    //                 }
+    //                 res.send(body);
+    //         })
+    //     });
 
-    app.get('/api/riot/champion/:champId', (req, res) => {
-        request(`https://na1.api.riotgames.com/lol/static-data/v3/champions/${req.params.champId}?api_key=${config.riot_api_key}`,
-            (err, response, body) => {
-                if (err) {
-                    res.send(Error('Not able to find matchlist data.'))
-                }
-                res.send(body)
-            })
-    })
+    // app.get('/api/riot/champion/:champId', (req, res) => {
+    //     request(`https://na1.api.riotgames.com/lol/static-data/v3/champions/${req.params.champId}?api_key=${config.riot_api_key}`,
+    //         (err, response, body) => {
+    //             if (err) {
+    //                 res.send(Error('Not able to find matchlist data.'))
+    //             }
+    //             res.send(body)
+    //         })
+    // })
 
-    // For now, route everything else to <views>/index.html
-    app.get("*", function(req, res) {
-        res.render("index.html");
-        // looks inside VIEWS
-    });
+    // // For now, route everything else to <views>/index.html
+    // app.get("*", function(req, res) {
+    //     res.render("index.html");
+    //     // looks inside VIEWS
+    // });
 };
