@@ -11,8 +11,8 @@ export class DataService {
   constructor(private _http: Http) { }
 
   getUsers() {
-    return this._http.get("/api/ciarra")
-      .map(result => this.result = result.json().data);
+    return this._http.get("/api/riot/getChampions")
+      .map(result => this.result = (result.json()).champions);
   }
 
 }

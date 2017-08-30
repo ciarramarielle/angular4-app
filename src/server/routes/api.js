@@ -1,5 +1,10 @@
 const express = require('express');
 const router = express.Router();
+
+const request = require("request");
+const env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+const config = require("./../config")[env];
+
 // const MongoClient = require('mongodb').MongoClient;
 // const ObjectID = require('mongodb').ObjectID;
 
@@ -44,6 +49,29 @@ router.get('/ciarra', (req, res) => {
     //             sendError(err, res);
     //         });
     // });
+});
+
+router.get('/riot/getChampions', function(req, res) {
+    // If unable to access API...
+    // response.data = [{
+    //     'a': 'fake champion data'
+    // }]
+    // res.json(response)
+
+    // Can set header API Key instead of query param
+    //  but need the other ones too i think...
+    // req.headers['X-Riot-Token'] = config.riot_api_key
+    
+    // console.log('headers', req.headers)
+    request(
+        `https://na1.api.riotgames.com/lol/platform/v3/champions?freeToPlay=false&api_key=${config.riot_api_key}`,
+        (err, response, body) => {
+            if (err) {
+                res.send(Error('Not able to find champion data.'));
+            }
+            res.send(body);
+        }
+    )
 });
 
 module.exports = router;

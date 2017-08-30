@@ -11,13 +11,16 @@ import { DataService } from './data.service';
 export class AppComponent {
   
   // Define a users property to hold our user data
-  users: Array<any>;
+  users: any;
 
   // Create an instance of the DataService through dependency injection
   constructor(private _dataService: DataService) {
 
     // Access the Data Service's getUsers() method we defined
     this._dataService.getUsers()
-        .subscribe(res => this.users = res);
+        .subscribe(res => {
+          console.log(res)
+          this.users = res
+        });
   }
 }
