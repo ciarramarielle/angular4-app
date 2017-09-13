@@ -74,4 +74,16 @@ router.get('/riot/getChampions', function(req, res) {
     )
 });
 
+router.get('/riot/champion/:id/static', function(req, res) {
+    request(
+`https://na1.api.riotgames.com/lol/static-data/v3/champions/${req.params.id}?locale=en_US&api_key=${config.riot_api_key}`,
+        (err, response, body) => {
+            if (err) {
+                res.send(Error('Not able to find champion data.'));
+            }
+            res.send(body);
+        }
+    )
+});
+
 module.exports = router;

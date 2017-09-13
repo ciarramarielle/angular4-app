@@ -15,4 +15,12 @@ export class DataService {
       .map(result => this.result = (result.json()).champions);
   }
 
+  getChampionStatic(id) {
+    return this._http.get("/api/riot/champion/"+id+"/static")
+      // .map(result => {
+      //   console.log(result.json())
+      //   this.result = ({data: result})
+      // });
+  }
+
 }
