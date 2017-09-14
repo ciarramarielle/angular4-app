@@ -23,4 +23,24 @@ export class DataService {
       // });
   }
 
+  getChampionsStatic() {
+    this.result = []
+    return this._http.get("/api/riot/champions/static")
+    // .then((data) => {})
+    .map((result) => {
+      // console.log('rtreter', result.json().data)
+      // const champions = (result.json().data).json()
+      const champions = Object.values(result.json().data)
+      champions.forEach((champion) => {
+        console.log('champ', champion)
+        this.result.push(champion);
+      })
+      return this.result
+    });    
+      // .map(result => {
+      //   console.log(result.json())
+      //   this.result = ({data: result})
+      // });
+  }
+
 }

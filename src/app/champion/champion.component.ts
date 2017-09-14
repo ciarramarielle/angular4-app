@@ -13,6 +13,7 @@ export class ChampionComponent implements OnInit {
   // champion: Champion;
   @Input() champion: Champion;
   championStatic: Champion;
+  imgUrl: string;
 
   // @Input() id: number;
 
@@ -21,22 +22,14 @@ export class ChampionComponent implements OnInit {
     //   id: 1,
     //   name: ''
     // }
+    this.imgUrl = 'http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/'
   }    
   
   ngOnInit() {
-    if (this.champion.freeToPlay) {
-      // this._dataService.getChampionStatic(this.champion.id)
-      // .subscribe(res => {
-      //   // console.log('I got ', res.json())
-      //   this.championStatic = res.json() || [{
-      //     id: 'UOououoouou'
-      //   }]
-      //   console.log(this.championStatic)
-      // }, (err) => {
-      //   console.log('err', err);
-      // });
-      this.championStatic = this.champion
-    }
+    // if (this.champion.id < 10) {
+    this.championStatic = this.champion
+      // this.championStatic = this.champion
+    // }
     // if (this.champion.freeToPlay) {
     //   // console.log('I got here', this.champion)
     //   this._dataService.getChampionStatic(this.champion.id)
