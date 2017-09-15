@@ -6,7 +6,9 @@
 
 <!-- <ul> -->
 <div class="container">
-    <champion *ngFor="let champion of champions" [champion]="champion"></champion>
+  <span *ngFor="let champion of champions" class="flex-1">
+    <champion [champion]="champion" (click)="logStuff(champion)"></champion>
+  </span>
 </div>
 <!-- <p>Hi</p> -->
 <!-- </ul> -->
