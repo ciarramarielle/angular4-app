@@ -32,7 +32,7 @@ export class DataService {
       // const champions = (result.json().data).json()
       const champions = Object.values(result.json().data)
       champions.forEach((champion) => {
-        console.log('champ', champion)
+        // console.log('champ', champion)
         this.result.push(champion);
       })
       return this.result

@@ -44,4 +44,5 @@ export class ChampionComponent implements OnInit {
     // }
     // // console.log('Hello', this.champion)    
   }
+  
 }

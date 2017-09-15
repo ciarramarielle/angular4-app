@@ -34,8 +34,4 @@ export class AppComponent {
         console.log('err', err);
       });
   }
-
-  logStuff(item) {
-    console.log('Logged', item)
-  }
 }

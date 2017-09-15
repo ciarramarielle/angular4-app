@@ -1,21 +1,20 @@
-<!-- <button class="btn btn-primary">Primary</button> -->
-<!-- <button class="btn btn-success">Success</button>
-<button class="btn btn-warning">Warning</button>
-<button class="btn btn-danger">Danger</button>
-<button class="btn btn-danger" disabled>Disabled</button> -->
-
-<!-- <ul> -->
-<div class="container">
-  <span *ngFor="let champion of champions" class="flex-1">
-    <champion [champion]="champion" (click)="logStuff(champion)"></champion>
-  </span>
-</div>
-<!-- <p>Hi</p> -->
-<!-- </ul> -->
-
-
-
-
+<header class="header-6">
+    <div class="branding">
+        <clr-icon shape="piggy-bank"></clr-icon>
+        ChampSelect  
+    </div>
+    <div class="header-nav">
+        <a href="javascript://" class="active nav-link nav-text">Dashboard</a>
+        <a href="javascript://" class="nav-link nav-text">Interactive Analytics</a>
+    </div>
+    <div class="header-actions">
+        <a href="javascript://" class="nav-link nav-icon">
+            <clr-icon shape="cog"></clr-icon>
+        </a>
+    </div>
+</header>
+<!-- {{ champions }} -->
+<champion-list [champions]="champions"></champion-list>
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- <div style="text-align:center">
   <h1>

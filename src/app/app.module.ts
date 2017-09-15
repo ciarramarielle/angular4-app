@@ -8,11 +8,13 @@ import { ClarityModule } from "clarity-angular";
 import { HttpModule } from '@angular/http';
 import { DataService } from './data.service';
 import { ChampionComponent } from './champion/champion.component';
+import { ChampionListComponent } from './champion-list/champion-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChampionComponent
+    ChampionComponent,
+    ChampionListComponent
   ],
   imports: [
     BrowserModule,
