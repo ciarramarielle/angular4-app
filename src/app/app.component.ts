@@ -25,11 +25,7 @@ export class AppComponent {
 
     this._dataService.getChampionsStatic()
       .subscribe(res => {
-        // console.log('res is ', res)
         this.champions = res
-        // this.champions = res || [{
-        //   id: 'UOououoouou'
-        // }]
       }, (err) => {
         console.log('err', err);
       });
