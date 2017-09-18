@@ -1,5 +1,3 @@
-<div class="container">
-  <span *ngFor="let champion of champions" class="flex-1">
-    <champion [champion]="champion" (click)="logStuff(champion)"></champion>
-  </span>
-</div>
+<span *ngFor="let champion of champions">
+    <champion [champion]="champion" (click)="logStuff(champion)" class="flex-1"></champion>
+</span>
