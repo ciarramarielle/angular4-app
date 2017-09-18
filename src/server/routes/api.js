@@ -32,23 +32,26 @@ let response = {
 };
 
 // Get users
-router.get('/ciarra', (req, res) => {
-    response.data = [{
-        'a': 'b'
-    }]
+router.get('/riot/getSummoner/:summonerName', (req, res) => {
+    response.data = {
+        "profileIconId": 1382,
+        "name": "Prxncess",
+        "summonerLevel": 30,
+        "accountId": 201137580,
+        "id": 38210559,
+        "revisionDate": 1505718454000
+    }
     res.json(response)
-    // connection((db) => {
-    //     db.collection('users')
-    //         .find()
-    //         .toArray()
-    //         .then((users) => {
-    //             response.data = users;
-    //             res.json(response);
-    //         })
-    //         .catch((err) => {
-    //             sendError(err, res);
-    //         });
-    // });
+
+    // FROM HERE
+    // request(
+    //     `https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/${req.params.summonerName}&api_key=${config.riot_api_key}`,
+    //     (err, response, body) => {
+    //         if (err) {
+    //             res.send(Error('Not able to find champion data.'));
+    //         }
+    //         res.send(body);
+    //     });
 });
 
 router.get('/riot/getChampions', function(req, res) {

@@ -16,9 +16,9 @@ export class ChampionListComponent implements OnInit {
   }
 
 
-  logStuff(item) {
-    console.log('Logged', item)
-  }
+  // logStuff(item) {
+  //   console.log('Logged', item)
+  // }
 
   performSearch(searchTerm: HTMLInputElement) {
     console.log('performSearch on: ', `${searchTerm.value}`)

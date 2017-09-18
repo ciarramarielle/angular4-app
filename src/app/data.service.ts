@@ -15,6 +15,15 @@ export class DataService {
       .map(result => this.result = (result.json()).champions);
   }
 
+  getSummoner(name) {
+    return this._http.get("/api/riot/getSummoner/"+name)
+      .map(result => {
+        this.result = (result.json().data)
+        console.log('getSummoner(', name, ')', result)
+        return this.result
+      });
+  }
+
   getChampionStatic(id) {
     return this._http.get("/api/riot/champion/"+id+"/static")
       // .map(result => {

@@ -14,6 +14,7 @@
     </div>
 </header>
 <!-- {{ champions }} -->
+<h1 *ngIf="summoner">{{summoner.name}}</h1>
 <champion-list [champions]="champions" class="container"></champion-list>
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- <div style="text-align:center">

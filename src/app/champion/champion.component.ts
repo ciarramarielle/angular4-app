@@ -27,7 +27,7 @@ export class ChampionComponent implements OnInit {
   
   ngOnInit() {
     // if (this.champion.id < 10) {
-    this.championStatic = this.champion
+    // this.championStatic = this.champion
       // this.championStatic = this.champion
     // }
     // if (this.champion.freeToPlay) {
@@ -43,6 +43,12 @@ export class ChampionComponent implements OnInit {
     //   });
     // }
     // // console.log('Hello', this.champion)    
+    
+  }
+
+  doThis(champion) {
+    champion.hello = !champion.hello
+    console.log('got', champion)    
   }
   
 }

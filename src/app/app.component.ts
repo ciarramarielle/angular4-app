@@ -10,6 +10,7 @@ import { DataService } from './data.service';
 })
 export class AppComponent {
   champions: any;
+  summoner: any;
 
   // Create an instance of the DataService through dependency injection
   constructor(private _dataService: DataService) {
@@ -29,5 +30,13 @@ export class AppComponent {
       }, (err) => {
         console.log('err', err);
       });
+
+    this._dataService.getSummoner('prxncess')
+    .subscribe(res => {
+      this.summoner = res
+      console.log('Hello???', this.summoner)      
+    }, err => {
+      console.log('Errr????')
+    });
   }
 }
