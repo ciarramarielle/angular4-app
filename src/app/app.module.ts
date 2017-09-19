@@ -11,6 +11,7 @@ import { ChampionComponent } from './champion/champion.component';
 import { ChampionListComponent } from './champion-list/champion-list.component';
 import { CurrentMatchComponent } from './current-match/current-match.component';
 import { MatchParticipantsComponent } from './match-participants/match-participants.component';
+import { ParticipantComponent } from './participant/participant.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MatchParticipantsComponent } from './match-participants/match-participa
     ChampionComponent,
     ChampionListComponent,
     CurrentMatchComponent,
-    MatchParticipantsComponent
+    MatchParticipantsComponent,
+    ParticipantComponent
   ],
   imports: [
     BrowserModule,
