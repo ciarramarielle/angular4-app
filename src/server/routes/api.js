@@ -54,6 +54,827 @@ router.get('/riot/getSummoner/:summonerName', (req, res) => {
     //     });
 });
 
+router.get('/riot/getCurrentMatch/:summonerId', (req, res) => {
+    response.data = {
+		"gameId": 2602045772,
+		"gameStartTime": 1505861132694,
+		"platformId": "NA1",
+		"gameMode": "CLASSIC",
+		"mapId": 11,
+		"gameType": "MATCHED_GAME",
+		"gameQueueConfigId": 420,
+		"observers": {
+			"encryptionKey": "dJWJ0yk6CdyDO8cp30Wh0SUaITFG2V5U"
+		},
+		"participants": [
+			{
+				"profileIconId": 1633,
+				"championId": 498,
+				"summonerName": "Nikola Senpai",
+				"runes": [
+					{
+						"count": 9,
+						"runeId": 5245
+					},
+					{
+						"count": 9,
+						"runeId": 5277
+					},
+					{
+						"count": 9,
+						"runeId": 5317
+					},
+					{
+						"count": 3,
+						"runeId": 5337
+					}
+				],
+				"bot": false,
+				"masteries": [
+					{
+						"masteryId": 6111,
+						"rank": 5
+					},
+					{
+						"masteryId": 6122,
+						"rank": 1
+					},
+					{
+						"masteryId": 6134,
+						"rank": 5
+					},
+					{
+						"masteryId": 6143,
+						"rank": 1
+					},
+					{
+						"masteryId": 6151,
+						"rank": 5
+					},
+					{
+						"masteryId": 6161,
+						"rank": 1
+					},
+					{
+						"masteryId": 6211,
+						"rank": 5
+					},
+					{
+						"masteryId": 6223,
+						"rank": 1
+					},
+					{
+						"masteryId": 6232,
+						"rank": 5
+					},
+					{
+						"masteryId": 6241,
+						"rank": 1
+					}
+				],
+				"spell2Id": 7,
+				"teamId": 100,
+				"spell1Id": 4,
+				"summonerId": 89609151
+			},
+			{
+				"profileIconId": 3022,
+				"championId": 421,
+				"summonerName": "HuangJintAo",
+				"runes": [
+					{
+						"count": 9,
+						"runeId": 5245
+					},
+					{
+						"count": 9,
+						"runeId": 5290
+					},
+					{
+						"count": 6,
+						"runeId": 5316
+					},
+					{
+						"count": 3,
+						"runeId": 5317
+					},
+					{
+						"count": 3,
+						"runeId": 5337
+					}
+				],
+				"bot": false,
+				"masteries": [
+					{
+						"masteryId": 6111,
+						"rank": 5
+					},
+					{
+						"masteryId": 6121,
+						"rank": 1
+					},
+					{
+						"masteryId": 6134,
+						"rank": 5
+					},
+					{
+						"masteryId": 6142,
+						"rank": 1
+					},
+					{
+						"masteryId": 6151,
+						"rank": 5
+					},
+					{
+						"masteryId": 6162,
+						"rank": 1
+					},
+					{
+						"masteryId": 6211,
+						"rank": 5
+					},
+					{
+						"masteryId": 6223,
+						"rank": 1
+					},
+					{
+						"masteryId": 6232,
+						"rank": 5
+					},
+					{
+						"masteryId": 6243,
+						"rank": 1
+					}
+				],
+				"spell2Id": 4,
+				"teamId": 100,
+				"spell1Id": 11,
+				"summonerId": 47842921
+			},
+			{
+				"profileIconId": 3078,
+				"championId": 90,
+				"summonerName": "Doubtfull",
+				"runes": [
+					{
+						"count": 9,
+						"runeId": 5273
+					},
+					{
+						"count": 3,
+						"runeId": 5289
+					},
+					{
+						"count": 6,
+						"runeId": 5296
+					},
+					{
+						"count": 9,
+						"runeId": 5316
+					},
+					{
+						"count": 3,
+						"runeId": 5365
+					}
+				],
+				"bot": false,
+				"masteries": [
+					{
+						"masteryId": 6114,
+						"rank": 5
+					},
+					{
+						"masteryId": 6122,
+						"rank": 1
+					},
+					{
+						"masteryId": 6134,
+						"rank": 5
+					},
+					{
+						"masteryId": 6143,
+						"rank": 1
+					},
+					{
+						"masteryId": 6154,
+						"rank": 5
+					},
+					{
+						"masteryId": 6164,
+						"rank": 1
+					},
+					{
+						"masteryId": 6211,
+						"rank": 5
+					},
+					{
+						"masteryId": 6223,
+						"rank": 1
+					},
+					{
+						"masteryId": 6232,
+						"rank": 5
+					},
+					{
+						"masteryId": 6241,
+						"rank": 1
+					}
+				],
+				"spell2Id": 12,
+				"teamId": 100,
+				"spell1Id": 4,
+				"summonerId": 50877721
+			},
+			{
+				"profileIconId": 1387,
+				"championId": 432,
+				"summonerName": "Liquid Lourlo",
+				"runes": [
+					{
+						"count": 9,
+						"runeId": 5247
+					},
+					{
+						"count": 9,
+						"runeId": 5297
+					},
+					{
+						"count": 9,
+						"runeId": 5316
+					},
+					{
+						"count": 3,
+						"runeId": 5347
+					}
+				],
+				"bot": false,
+				"masteries": [
+					{
+						"masteryId": 6211,
+						"rank": 5
+					},
+					{
+						"masteryId": 6221,
+						"rank": 1
+					},
+					{
+						"masteryId": 6232,
+						"rank": 5
+					},
+					{
+						"masteryId": 6241,
+						"rank": 1
+					},
+					{
+						"masteryId": 6251,
+						"rank": 5
+					},
+					{
+						"masteryId": 6263,
+						"rank": 1
+					},
+					{
+						"masteryId": 6312,
+						"rank": 5
+					},
+					{
+						"masteryId": 6322,
+						"rank": 1
+					},
+					{
+						"masteryId": 6332,
+						"rank": 5
+					},
+					{
+						"masteryId": 6342,
+						"rank": 1
+					}
+				],
+				"spell2Id": 4,
+				"teamId": 100,
+				"spell1Id": 14,
+				"summonerId": 19061980
+			},
+			{
+				"profileIconId": 3025,
+				"championId": 58,
+				"summonerName": "Dyrus",
+				"runes": [
+					{
+						"count": 9,
+						"runeId": 5245
+					},
+					{
+						"count": 9,
+						"runeId": 5295
+					},
+					{
+						"count": 9,
+						"runeId": 5317
+					},
+					{
+						"count": 2,
+						"runeId": 5335
+					},
+					{
+						"count": 1,
+						"runeId": 5355
+					}
+				],
+				"bot": false,
+				"masteries": [
+					{
+						"masteryId": 6111,
+						"rank": 5
+					},
+					{
+						"masteryId": 6121,
+						"rank": 1
+					},
+					{
+						"masteryId": 6131,
+						"rank": 1
+					},
+					{
+						"masteryId": 6134,
+						"rank": 4
+					},
+					{
+						"masteryId": 6143,
+						"rank": 1
+					},
+					{
+						"masteryId": 6151,
+						"rank": 5
+					},
+					{
+						"masteryId": 6162,
+						"rank": 1
+					},
+					{
+						"masteryId": 6211,
+						"rank": 5
+					},
+					{
+						"masteryId": 6223,
+						"rank": 1
+					},
+					{
+						"masteryId": 6231,
+						"rank": 5
+					},
+					{
+						"masteryId": 6243,
+						"rank": 1
+					}
+				],
+				"spell2Id": 4,
+				"teamId": 100,
+				"spell1Id": 12,
+				"summonerId": 5908
+			},
+			{
+				"profileIconId": 4,
+				"championId": 429,
+				"summonerName": "watercold",
+				"runes": [
+					{
+						"count": 7,
+						"runeId": 5245
+					},
+					{
+						"count": 2,
+						"runeId": 5247
+					},
+					{
+						"count": 6,
+						"runeId": 5277
+					},
+					{
+						"count": 3,
+						"runeId": 5289
+					},
+					{
+						"count": 9,
+						"runeId": 5317
+					},
+					{
+						"count": 3,
+						"runeId": 5337
+					}
+				],
+				"bot": false,
+				"masteries": [
+					{
+						"masteryId": 6111,
+						"rank": 5
+					},
+					{
+						"masteryId": 6121,
+						"rank": 1
+					},
+					{
+						"masteryId": 6134,
+						"rank": 5
+					},
+					{
+						"masteryId": 6142,
+						"rank": 1
+					},
+					{
+						"masteryId": 6151,
+						"rank": 5
+					},
+					{
+						"masteryId": 6162,
+						"rank": 1
+					},
+					{
+						"masteryId": 6211,
+						"rank": 5
+					},
+					{
+						"masteryId": 6223,
+						"rank": 1
+					},
+					{
+						"masteryId": 6232,
+						"rank": 5
+					},
+					{
+						"masteryId": 6243,
+						"rank": 1
+					}
+				],
+				"spell2Id": 7,
+				"teamId": 200,
+				"spell1Id": 4,
+				"summonerId": 79029093
+			},
+			{
+				"profileIconId": 3015,
+				"championId": 79,
+				"summonerName": "MRTONERBONER",
+				"runes": [
+					{
+						"count": 9,
+						"runeId": 5247
+					},
+					{
+						"count": 6,
+						"runeId": 5295
+					},
+					{
+						"count": 3,
+						"runeId": 5297
+					},
+					{
+						"count": 6,
+						"runeId": 5316
+					},
+					{
+						"count": 3,
+						"runeId": 5317
+					},
+					{
+						"count": 1,
+						"runeId": 5347
+					},
+					{
+						"count": 2,
+						"runeId": 5357
+					}
+				],
+				"bot": false,
+				"masteries": [
+					{
+						"masteryId": 6114,
+						"rank": 5
+					},
+					{
+						"masteryId": 6123,
+						"rank": 1
+					},
+					{
+						"masteryId": 6134,
+						"rank": 5
+					},
+					{
+						"masteryId": 6142,
+						"rank": 1
+					},
+					{
+						"masteryId": 6211,
+						"rank": 5
+					},
+					{
+						"masteryId": 6223,
+						"rank": 1
+					},
+					{
+						"masteryId": 6231,
+						"rank": 5
+					},
+					{
+						"masteryId": 6241,
+						"rank": 1
+					},
+					{
+						"masteryId": 6251,
+						"rank": 5
+					},
+					{
+						"masteryId": 6262,
+						"rank": 1
+					}
+				],
+				"spell2Id": 4,
+				"teamId": 200,
+				"spell1Id": 11,
+				"summonerId": 47836799
+			},
+			{
+				"profileIconId": 8,
+				"championId": 26,
+				"summonerName": "ppmdtechskill",
+				"runes": [
+					{
+						"count": 9,
+						"runeId": 5247
+					},
+					{
+						"count": 9,
+						"runeId": 5297
+					},
+					{
+						"count": 9,
+						"runeId": 5315
+					},
+					{
+						"count": 3,
+						"runeId": 5347
+					}
+				],
+				"bot": false,
+				"masteries": [
+					{
+						"masteryId": 6211,
+						"rank": 5
+					},
+					{
+						"masteryId": 6221,
+						"rank": 1
+					},
+					{
+						"masteryId": 6232,
+						"rank": 5
+					},
+					{
+						"masteryId": 6241,
+						"rank": 1
+					},
+					{
+						"masteryId": 6251,
+						"rank": 5
+					},
+					{
+						"masteryId": 6263,
+						"rank": 1
+					},
+					{
+						"masteryId": 6311,
+						"rank": 5
+					},
+					{
+						"masteryId": 6322,
+						"rank": 1
+					},
+					{
+						"masteryId": 6332,
+						"rank": 5
+					},
+					{
+						"masteryId": 6342,
+						"rank": 1
+					}
+				],
+				"spell2Id": 3,
+				"teamId": 200,
+				"spell1Id": 4,
+				"summonerId": 19451735
+			},
+			{
+				"profileIconId": 3081,
+				"championId": 39,
+				"summonerName": "Imaokai",
+				"runes": [
+					{
+						"count": 6,
+						"runeId": 5245
+					},
+					{
+						"count": 3,
+						"runeId": 5247
+					},
+					{
+						"count": 9,
+						"runeId": 5289
+					},
+					{
+						"count": 9,
+						"runeId": 5317
+					},
+					{
+						"count": 3,
+						"runeId": 5337
+					}
+				],
+				"bot": false,
+				"masteries": [
+					{
+						"masteryId": 6111,
+						"rank": 5
+					},
+					{
+						"masteryId": 6121,
+						"rank": 1
+					},
+					{
+						"masteryId": 6134,
+						"rank": 5
+					},
+					{
+						"masteryId": 6141,
+						"rank": 1
+					},
+					{
+						"masteryId": 6151,
+						"rank": 5
+					},
+					{
+						"masteryId": 6162,
+						"rank": 1
+					},
+					{
+						"masteryId": 6211,
+						"rank": 5
+					},
+					{
+						"masteryId": 6223,
+						"rank": 1
+					},
+					{
+						"masteryId": 6232,
+						"rank": 5
+					},
+					{
+						"masteryId": 6241,
+						"rank": 1
+					}
+				],
+				"spell2Id": 4,
+				"teamId": 200,
+				"spell1Id": 12,
+				"summonerId": 52372786
+			},
+			{
+				"profileIconId": 2087,
+				"championId": 61,
+				"summonerName": "RyuShoryu",
+				"runes": [
+					{
+						"count": 9,
+						"runeId": 5273
+					},
+					{
+						"count": 9,
+						"runeId": 5296
+					},
+					{
+						"count": 9,
+						"runeId": 5316
+					},
+					{
+						"count": 3,
+						"runeId": 5357
+					}
+				],
+				"bot": false,
+				"masteries": [
+					{
+						"masteryId": 6114,
+						"rank": 5
+					},
+					{
+						"masteryId": 6122,
+						"rank": 1
+					},
+					{
+						"masteryId": 6134,
+						"rank": 5
+					},
+					{
+						"masteryId": 6142,
+						"rank": 1
+					},
+					{
+						"masteryId": 6312,
+						"rank": 5
+					},
+					{
+						"masteryId": 6322,
+						"rank": 1
+					},
+					{
+						"masteryId": 6331,
+						"rank": 5
+					},
+					{
+						"masteryId": 6343,
+						"rank": 1
+					},
+					{
+						"masteryId": 6351,
+						"rank": 5
+					},
+					{
+						"masteryId": 6362,
+						"rank": 1
+					}
+				],
+				"spell2Id": 4,
+				"teamId": 200,
+				"spell1Id": 7,
+				"summonerId": 38911162
+			}
+		],
+		"gameLength": 359,
+		"bannedChampions": [
+			{
+				"teamId": 100,
+				"championId": 92,
+				"pickTurn": 1
+			},
+			{
+				"teamId": 100,
+				"championId": 18,
+				"pickTurn": 2
+			},
+			{
+				"teamId": 100,
+				"championId": 117,
+				"pickTurn": 3
+			},
+			{
+				"teamId": 100,
+				"championId": 69,
+				"pickTurn": 4
+			},
+			{
+				"teamId": 100,
+				"championId": 59,
+				"pickTurn": 5
+			},
+			{
+				"teamId": 200,
+				"championId": 412,
+				"pickTurn": 6
+			},
+			{
+				"teamId": 200,
+				"championId": 40,
+				"pickTurn": 7
+			},
+			{
+				"teamId": 200,
+				"championId": 69,
+				"pickTurn": 8
+			},
+			{
+				"teamId": 200,
+				"championId": 117,
+				"pickTurn": 9
+			},
+			{
+				"teamId": 200,
+				"championId": 12,
+				"pickTurn": 10
+			}
+		]
+	}
+    res.json(response)
+
+    // FROM HERE
+    // request(
+    //     `https://na1.api.riotgames.com/lol/spectator/v3/active-games/by-summoner/${req.params.summonerId}&api_key=${config.riot_api_key}`,
+    //     (err, response, body) => {
+    //         if (err) {
+    //             res.send(Error('Not able to find champion data.'));
+    //         }
+    //         res.send(body);
+    //     });
+});
+
 router.get('/riot/getChampions', function(req, res) {
     // If unable to access API...
     // response.data = [{

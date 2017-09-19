@@ -6,41 +6,51 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DataService {
 
-  result:any;
+	result: any;
 
-  constructor(private _http: Http) { }
+	constructor(private _http: Http) { }
 
-  getChampions() {
-    return this._http.get("/api/riot/getChampions")
-      .map(result => this.result = (result.json()).champions);
-  }
+	getChampions() {
+		return this._http.get("/api/riot/getChampions")
+			.map(result => this.result = (result.json()).champions);
+	}
 
-  getSummoner(name) {
-    return this._http.get("/api/riot/getSummoner/"+name)
-      .map(result => {
-        this.result = (result.json().data)
-        console.log('getSummoner(', name, ')', result)
-        return this.result
-      });
-  }
+	getSummoner(name) {
+		return this._http.get("/api/riot/getSummoner/" + name)
+			.map(result => {
+				this.result = (result.json().data)
+				console.log('getSummoner(', name, ')', result)
+				return this.result
+			});
+	}
 
-  getChampionStatic(id) {
-    return this._http.get("/api/riot/champion/"+id+"/static")
-      // .map(result => {
-      //   this.result = ({data: result})
-      // });
-  }
+	getChampionStatic(id) {
+		return this._http.get("/api/riot/champion/" + id + "/static")
+		// .map(result => {
+		//   this.result = ({data: result})
+		// });
+	}
 
-  getChampionsStatic() {
-    this.result = []
-    return this._http.get("/api/riot/champions/static")
-    .map((result) => {
-      const champions = Object.values(result.json().data)
-      champions.forEach((champion) => {
-        this.result.push(champion);
-      })
-      return this.result
-    });    
-  }
+	getChampionsStatic() {
+		this.result = []
+		return this._http.get("/api/riot/champions/static")
+			.map((result) => {
+				const champions = Object.values(result.json().data)
+				champions.forEach((champion) => {
+					this.result.push(champion);
+				})
+				return this.result
+			});
+	}
 
+	//   /riot/getCurrentMatch/:summonerId
+	getCurrentMatch(summonerId) {
+		// console.log('query for ', summonerId)
+		return this._http.get(`/api/riot/getCurrentMatch/${summonerId}`)
+			.map((result) => {
+				console.log(result)
+				this.result = (result.json()).data
+				return this.result
+			});
+	}
 }
