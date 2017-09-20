@@ -24,9 +24,8 @@ export class AppComponent {
 		this._dataService.getSummoner('Dyrus')
 			.subscribe(res => {
 				this.summoner = res
-				console.log('Hello???', this.summoner)
 			}, err => {
-				console.log('Errr????')
+				console.log('Errr????', err)
 			});
 	}
 }

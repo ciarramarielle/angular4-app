@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../data.service'
+import * as _ from 'underscore';
 
 @Component({
 	selector: 'current-match',
@@ -9,23 +10,36 @@ import { DataService } from '../data.service'
 export class CurrentMatchComponent implements OnInit {
 
 	@Input() summonerId: string;
-	hello: any;
+	currentMatch: any;
 	participants: any;
+	summonerTeamParticipants: any;
+	enemyTeamParticipants: any;
 
 	constructor(private _dataService: DataService) { }
 
 	ngOnInit() {
 		if (this.summonerId) {
-			console.log('I got a summoner', this.summonerId)
 			this._dataService.getCurrentMatch(this.summonerId)
-			.subscribe((res) => {
-				console.log(res)
-				this.hello = Object.keys(res)
-				this.participants = res.participants
-			}, (err) => {
-				console.log(err)
-			})
+				.subscribe((res) => {
+					this.currentMatch = res
+					this.participants = res.participants
+
+					let summonerParticipantData = _.findWhere(this.participants, {
+						summonerId: this.summonerId
+					})
+
+					const summonerTeamId = summonerParticipantData['teamId']
+					// Separate into teams
+					this.summonerTeamParticipants = _.filter(this.participants, (participant) => {
+						return participant['teamId'] === summonerTeamId
+					})
+
+					this.enemyTeamParticipants = _.filter(this.participants, (participant) => {
+						return participant['teamId'] != summonerTeamId
+					})
+				}, (err) => {
+					console.log(err)
+				})
 		}
 	}
-
 }

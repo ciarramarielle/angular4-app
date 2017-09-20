@@ -19,7 +19,6 @@ export class DataService {
 		return this._http.get("/api/riot/getSummoner/" + name)
 			.map(result => {
 				this.result = (result.json().data)
-				console.log('getSummoner(', name, ')', result)
 				return this.result
 			});
 	}
@@ -48,7 +47,6 @@ export class DataService {
 		// console.log('query for ', summonerId)
 		return this._http.get(`/api/riot/getCurrentMatch/${summonerId}`)
 			.map((result) => {
-				console.log(result)
 				this.result = (result.json()).data
 				return this.result
 			});

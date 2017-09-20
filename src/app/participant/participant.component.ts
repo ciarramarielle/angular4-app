@@ -11,6 +11,7 @@ export class ParticipantComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit() {
+		console.log('Hello there: ', this.participant)
 	}
 
 }

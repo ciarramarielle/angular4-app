@@ -1,8 +1,7 @@
-<!-- <p>
-  match-participants works!
-</p> -->
-<!-- <div class="container"> -->
-<span *ngFor="let participant of participants">
-	<participant [participant]="participant" class="flex-1"></participant>
-</span>
-<!-- </div> -->
+<div class="col-lg-1" style="visibility: hidden;"></div>
+
+<div *ngFor="let participant of participants" class="col-lg-2">
+	<participant [participant]="participant" class="card"></participant>
+</div>
+
+<div class="col-lg-1" style="visibility: hidden;"></div>

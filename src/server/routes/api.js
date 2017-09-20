@@ -35,10 +35,10 @@ let response = {
 router.get('/riot/getSummoner/:summonerName', (req, res) => {
     response.data = {
         "profileIconId": 1382,
-        "name": "Prxncess",
+        "name": "Dyrus",
         "summonerLevel": 30,
         "accountId": 201137580,
-        "id": 38210559,
+        "id": 5908,
         "revisionDate": 1505718454000
     }
     res.json(response)

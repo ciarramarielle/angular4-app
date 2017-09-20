@@ -4,7 +4,7 @@
     </div>
     <header class="header header-6">
 		<div class="branding">
-			<clr-icon shape="piggy-bank"></clr-icon>
+			<!-- <clr-icon shape="piggy-bank"></clr-icon> -->
 			ChampSelect  
 		</div>
 		<div class="header-nav">
@@ -22,11 +22,11 @@
     </nav>
     <div class="content-container">
         <div class="content-area">
-            <current-match *ngIf="summoner" [summonerId]="summoner.id" class="container"></current-match>			
+			<current-match *ngIf="summoner" [summonerId]="summoner.id"></current-match>			
         </div>
-        <nav class="sidenav">
+        <!-- <nav class="sidenav">
             ...
-        </nav>
+        </nav> -->
     </div>
 </div>
 
