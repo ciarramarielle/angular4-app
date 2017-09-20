@@ -22,18 +22,20 @@
 		 <div class="col-xs-4">[mastery]</div>
 		 <div class="col-xs-8">[W % / L%]</div>
 	</div> -->
-	<ul>
-		<li *ngIf="this.mastery">
-			<span class="label">
-				Mastery
-				<span class="badge badge-purple">{{ this.mastery }}</span>				
-			</span>
-			
-		</li>
+	<!-- TODO -->
+	<ul style="list-style: none; display: none;">
 		<li>Skill (from mastery and WR)</li>
 		<li>Win rate on champion</li>
-		<!-- <li>Win streak on champion (20)</li> -->
 		<li>Recent W/L Streak o x</li>
-		<li>Main Roles (labels)</li>
 	</ul>
+	<div class="row" *ngIf="this.mastery">
+		<span class="label">
+			Champion Mastery
+			<span class="badge badge-purple">{{ this.mastery }}</span>
+		</span>
+
+	</div>
+	<div class="row">
+		<span class="label label-success">Main: {{ bestRole }}</span>			
+	</div>
 </div>

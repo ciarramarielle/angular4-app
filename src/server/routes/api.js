@@ -3126,4 +3126,215 @@ router.get('/riot/champion-masteries/by-summoner/:summonerId/by-champion/:champi
 	res.json(response)
 })
 
+router.get('/riot/matchlist/:accountId/recent', (req, res) => {
+	response.data = {
+		"matches": [
+			{
+				"lane": "BOTTOM",
+				"gameId": 2602191358,
+				"champion": 267,
+				"platformId": "NA1",
+				"timestamp": 1505872693794,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2601439919,
+				"champion": 267,
+				"platformId": "NA1",
+				"timestamp": 1505789630910,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "JUNGLE",
+				"gameId": 2601397255,
+				"champion": 21,
+				"platformId": "NA1",
+				"timestamp": 1505787950710,
+				"queue": 980,
+				"role": "NONE",
+				"season": 9
+			},
+			{
+				"lane": "MID",
+				"gameId": 2601359516,
+				"champion": 99,
+				"platformId": "NA1",
+				"timestamp": 1505785281196,
+				"queue": 420,
+				"role": "SOLO",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2601345470,
+				"champion": 16,
+				"platformId": "NA1",
+				"timestamp": 1505783010790,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2601035384,
+				"champion": 16,
+				"platformId": "NA1",
+				"timestamp": 1505717030003,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2599600880,
+				"champion": 267,
+				"platformId": "NA1",
+				"timestamp": 1505581777708,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2596994858,
+				"champion": 267,
+				"platformId": "NA1",
+				"timestamp": 1505266124500,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2596919599,
+				"champion": 16,
+				"platformId": "NA1",
+				"timestamp": 1505264406725,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2593561039,
+				"champion": 16,
+				"platformId": "NA1",
+				"timestamp": 1504920811865,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2593520354,
+				"champion": 16,
+				"platformId": "NA1",
+				"timestamp": 1504918461801,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2590927047,
+				"champion": 16,
+				"platformId": "NA1",
+				"timestamp": 1504667110670,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2590839256,
+				"champion": 267,
+				"platformId": "NA1",
+				"timestamp": 1504663275576,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2590842740,
+				"champion": 43,
+				"platformId": "NA1",
+				"timestamp": 1504660645572,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2586463802,
+				"champion": 25,
+				"platformId": "NA1",
+				"timestamp": 1504152651287,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2585850377,
+				"champion": 16,
+				"platformId": "NA1",
+				"timestamp": 1504058545924,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2582081294,
+				"champion": 267,
+				"platformId": "NA1",
+				"timestamp": 1503627041688,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2581985936,
+				"champion": 25,
+				"platformId": "NA1",
+				"timestamp": 1503623894852,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2581991099,
+				"champion": 37,
+				"platformId": "NA1",
+				"timestamp": 1503621111846,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			},
+			{
+				"lane": "BOTTOM",
+				"gameId": 2580466878,
+				"champion": 25,
+				"platformId": "NA1",
+				"timestamp": 1503457277584,
+				"queue": 420,
+				"role": "DUO_SUPPORT",
+				"season": 9
+			}
+		],
+		"endIndex": 20,
+		"startIndex": 0,
+		"totalGames": 20
+	}
+	res.json(response)
+})
+
 module.exports = router;
