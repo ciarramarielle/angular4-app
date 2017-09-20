@@ -51,4 +51,14 @@ export class DataService {
 				return this.result
 			});
 	}
+
+	getChampionMastery(summonerId, championId) {
+		return this._http.get(
+			`/api/riot/champion-masteries/by-summoner/${summonerId}/by-champion/${championId}`
+		).map((res) => {
+			console.log('masteries', res)
+			this.result = (res.json())
+			return this.result
+		})
+	}
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from '../data.service'
 
 @Component({
 	selector: 'participant',
@@ -8,10 +9,19 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ParticipantComponent implements OnInit {
 
 	@Input() participant: any;
-	constructor() { }
+	mastery: number;
 
+	constructor(private _dataService: DataService) { }
+	
 	ngOnInit() {
-		console.log('Hello there: ', this.participant)
+		if (this.participant) {
+			console.log('Hello there: ', this.participant)
+			this._dataService.getChampionMastery(this.participant.summonerId, this.participant.championId)
+			.subscribe((res) => {
+				console.log('jfkdlja', res)
+				this.mastery = res.data.championLevel
+			})
+		}
 	}
 
 	getChampionImg(championId) {

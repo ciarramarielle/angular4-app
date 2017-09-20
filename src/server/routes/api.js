@@ -3111,4 +3111,19 @@ router.get('/riot/champions/static', (req, res) => {
 //     )
 // });
 
+router.get('/riot/champion-masteries/by-summoner/:summonerId/by-champion/:championId', (req, res) => {
+	response.data = {
+    "championLevel": 7,
+    "chestGranted": true,
+    "championPoints": 242916,
+    "championPointsSinceLastLevel": 221316,
+    "playerId": 38210559,
+    "championPointsUntilNextLevel": 0,
+    "tokensEarned": 0,
+    "championId": 267,
+    "lastPlayTime": 1505874959000
+	}
+	res.json(response)
+})
+
 module.exports = router;
