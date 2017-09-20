@@ -14,3 +14,6 @@
 .flex-1 {
     flex-grow: 1;
 } */
+.content-area {
+	background: linear-gradient(to right, rgba(164,217,245,1) 0%, rgba(247,202,244,1) 100%);
+}

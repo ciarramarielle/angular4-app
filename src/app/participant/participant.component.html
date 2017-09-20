@@ -1,22 +1,33 @@
-<div class="card-header">
+<!-- <div class="card-header">
 	<div class="card-media-block">
-		<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/imabigteemo-profile_image-1e5b5c67c1c71f14-300x300.jpeg" class="card-media-image">
+		<img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Aatrox_0.jpg" class="card-media-image">
 		<div class="card-media-description">
 			<h4>{{ participant.summonerName }}</h4>
 		</div>
 	</div>
+</div> -->
+<div class="card-title" style="text-align: center;">
+	<h3>{{ this.participant.summonerName }}</h3>
+</div>
+<div class="card-img">
+	<img src="{{this.getChampionImg(participant.championId)}}" />
 </div>
 <div class="card-block">
-	...
-	<div class="row"  style="border: 1px dotted lightblue;">
-		<div class="col-xs-4">
-			a
-		</div>
-		<div class="col-xs-4">
-			b
-		</div>
-		<div class="col-xs-4">
-			c
-		</div>
-	</div>
+	<!-- <div class="row"  style="border: 1px dotted lightblue;">
+		<div class="col-xs-4">a</div>
+		<div class="col-xs-4">b</div>
+		<div class="col-xs-4">c</div>
+	</div> -->
+	<!-- <div class="row"  style="border: 1px dotted lightblue;">
+		 <div class="col-xs-4">[mastery]</div>
+		 <div class="col-xs-8">[W % / L%]</div>
+	</div> -->
+	<ul>
+		<li>Champion Mastery (n)</li>
+		<li>Skill (from mastery and WR)</li>
+		<li>Win rate on champion</li>
+		<!-- <li>Win streak on champion (20)</li> -->
+		<li>Recent W/L Streak o x</li>
+		<li>Main Roles (labels)</li>
+	</ul>
 </div>
